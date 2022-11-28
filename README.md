@@ -28,11 +28,11 @@
 - 花が好きな人。
 
 ### 主な利用シーン
-- 教室会員の花や道具の購入。
-- 教室会員の欠席時の振替教室の予約申込。
-- 会員の作品展示。
+- 教室会員の花や道具の購入をするとき。
+- 教室会員の欠席時の振替教室の予約申込をするとき。
+- 会員の作品展示をするとき。
 - フラワーアレンジメントに興味のある人が教室に通いたいとき。
-- 教室からのお知らせ。
+- 教室からのお知らせをするとき。
 
 ## 設計書
 
@@ -41,10 +41,10 @@ https://docs.google.com/spreadsheets/d/1ZhQS_s_DrH2ZBAETImMPoTwoqv7drajJJYryxk8g
 
 ## 開発環境
 OS：Linux(CentOS)
-言語：HTML,CSS,JavaScript,Ruby,SQL
-フレームワーク：Ruby on Rails
-JSライブラリ：jQuery
-IDE：Cloud9
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
 ## 使用素材
 使用検討中

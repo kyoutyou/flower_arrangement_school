@@ -1,0 +1,2 @@
+class Addmin < ApplicationRecord
+end
