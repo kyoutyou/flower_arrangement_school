@@ -1,2 +1,0 @@
-class Addmin < ApplicationRecord
-end
