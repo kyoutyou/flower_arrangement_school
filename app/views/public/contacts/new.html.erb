@@ -1,0 +1,8 @@
+<div class="w-50 mx-auto">
+  <h4>お問い合わせ</h4>
+    <%= form_with url: public_contacts_confirm_path do |f| %>
+      <%= f.text_field :name %>
+      <%= f.text_area :body %>
+      <%= f.submit '送信 %>
+    <% end %>
+</div>

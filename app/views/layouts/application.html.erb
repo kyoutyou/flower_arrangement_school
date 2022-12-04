@@ -19,20 +19,13 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="container ms-auto py-3">
-          <nav class="navbar navbar-light bg-light float-right">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </nav>
-        </div>
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to  public_user_path do %>
+              <%= link_to public_user_path(:id) do %>
                 <div class="nav-link">マイページ</div>
               <% end %>
             </li>
@@ -41,11 +34,11 @@
                 <div class="nav-link">カレンダー</div>
               <% end %>
             </li>
-            <!--<li class="nav-item">-->
-            <!--  <%= link_to _path do %>-->
-            <!--    <div class="nav-link">お問い合わせ</div>-->
-            <!--  <% end %>-->
-            <!--</li>-->
+            <li class="nav-item">
+              <%= link_to new_public_contacts_path do %>
+                <div class="nav-link">お問い合わせ</div>
+              <% end %>
+            </li>
             <li class="nav-item">
               <%= link_to  destroy_user_session_path, method: :delete do %>
                 <div class="nav-link">ログアウト</div>
@@ -100,15 +93,10 @@
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to items_path do %>
-                <div class="nav-link">ゲストログイン</div>
+              <%= link_to users_guest_sign_in_path, method: :post do %>
+                <div class="nav-link">ゲストログイン（閲覧用）</div>
               <% end %>
             </li>
-            <!--<li class="nav-item">-->
-            <!--  <%= link_to _path do %>-->
-            <!--    <div class="nav-link">お問い合わせ</div>-->
-            <!--  <% end %>-->
-            <!--</li>-->
           <% end %>
           </ul>
           <form class="form-inline my-2 my-lg-0">

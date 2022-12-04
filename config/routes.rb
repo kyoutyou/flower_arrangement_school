@@ -21,8 +21,11 @@ Rails.application.routes.draw do
   namespace :public do
     get 'users/unsubscribe'=>'users#unsubscribe'
     get 'users/withdraw'=>'users#withdraw'
+    post 'contacts/confirm'=>"contacts#confirm"
+    get 'contacts/thanks'=>"contacts#thanks"
     resources :users,only:[:show,:edit,:update]
     resources :reservations,only:[:index,:edit,:update]
+    resource :contacts,only:[:new,:creat]
   end
 
   namespace :admin_backup do
