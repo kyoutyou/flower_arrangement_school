@@ -25,7 +25,7 @@
           <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to public_user_path(:id) do %>
+              <%= link_to public_customer_path(:id) do %>
                 <div class="nav-link">マイページ</div>
               <% end %>
             </li>
@@ -47,12 +47,12 @@
 
           <% elsif admin_signed_in? %>
             <li class="nav-item">
-              <%= link_to admin_backup_root_path do %>
+              <%= link_to admins_root_path do %>
                 <div class="nav-link">会員一覧</div>
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to admin_backup_reservations_path do %>
+              <%= link_to admins_reservations_path do %>
                 <div class="nav-link">連絡履歴一覧</div>
               <% end %>
             </li>

@@ -1,0 +1,20 @@
+<div class="w-50 mx-auto">
+  <h4>マイページ</h4>
+    <div>
+      <P>
+        氏名:<%= @customer.first_name %>
+        <%= @customer.last_name %>
+      </P>
+      <P>
+        カナ:<%= @customer.first_name_kana %>
+        <%= @customer.last_name_kana %>
+      </P>
+      <p>郵便番号:<%= @customer.postal_code %></p>
+      <P>住所:<%= @customer.address %></P>
+      <P>電話番号:<%= @customer.telephone_number %></P>
+      <P>メールアドレス:<%= @customer.email %></P>
+    </div>
+    <p>
+      登録情報:<%= link_to "編集する", edit_public_customer_path(current_user.id) %>
+    </p>
+</div>

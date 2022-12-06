@@ -23,12 +23,11 @@ Rails.application.routes.draw do
     get 'users/withdraw'=>'users#withdraw'
     post 'contacts/confirm'=>"contacts#confirm"
     get 'contacts/thanks'=>"contacts#thanks"
-    resources :users,only:[:show,:edit,:update]
+    resources :customers,only:[:show,:edit,:update]
     resources :reservations,only:[:index,:edit,:update]
     resource :contacts,only:[:new,:creat]
   end
-
-  namespace :admin_backup do
+  namespace :admins do
     root to:"homes#top"
     resources :users,only:[:show,:edit,:update]
     resources :productions,only:[:edit,:update]
