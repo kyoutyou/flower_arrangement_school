@@ -10,4 +10,8 @@ class HomesController < ApplicationController
 
   def course
   end
+  
+  def calendar
+    
+  end
 end

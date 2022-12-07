@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     get 'home/about'=>"homes#about", as: "about"
     get 'home/production'=>"homes#production", as: "production"
     get 'home/course'=>"homes#course", as: "course"
+    get 'home/calendar'=>"homes#calendar"
+    resources :calendars,only:[:show]
   namespace :public do
     get 'users/unsubscribe'=>'users#unsubscribe'
     get 'users/withdraw'=>'users#withdraw'
