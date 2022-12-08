@@ -1,6 +1,6 @@
 <div class="w-25 mx-auto">
   <h4>予約カレンダー</h4>
     <%= month_calendar do |date| %>
-      <%= link_to date.day %>
+      <%= link_to date.day,new_public_reservation_path(date: date) %>
     <% end %>
 </div>

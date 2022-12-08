@@ -1,0 +1,59 @@
+<div class="w-25 mx-auto mt-3">
+  <h4>
+    <%= @user.first_name %>
+    <%= @user.last_name %>
+    様の会員詳細
+  </h4>
+  <table class="table tabli-hover table-inverse">
+    <tbody>
+      <tr>
+        <td>会員ID</td>
+        <td><%= @user.id %></td>
+      </tr>
+      <tr>
+        <td>氏名</td>
+        <td>
+          <%= @user.first_name %>
+          <%= @user.last_name %>
+        </td>
+      </tr>
+      <tr>
+        <td>フリガナ</td>
+        <td>
+          <%= @user.first_name_kana %>
+          <%= @user.last_name_kana %>
+        </td>
+      </tr>
+      <tr>
+        <td>郵便番号</td>
+        <td><%= @user.postal_code %></td>
+      </tr>
+      <tr>
+        <td>住所</td>
+        <td><%= @user.address %></td>
+      </tr>
+      <tr>
+        <td>電話番号</td>
+        <td><%= @user.telephone_number %></td>
+      </tr>
+      <tr>
+        <td>メールアドレス</td>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <td>会員ステータス</td>
+        <td>
+          <% if @user.is_deleted %>
+           退会
+          <% else %>
+          有効
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><%= link_to '編集する',edit_admins_user_path(@user) %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

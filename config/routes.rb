@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to:"homes#top"
     get 'home/about'=>"homes#about", as: "about"
-    get 'home/production'=>"homes#production", as: "production"
-    get 'home/course'=>"homes#course", as: "course"
+    get 'home/productions'=>"homes#productions", as: "production"
+    get 'home/courses'=>"homes#courses", as: "courses"
     get 'home/calendar'=>"homes#calendar"
     resources :calendars,only:[:show]
   namespace :public do
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     post 'contacts/confirm'=>"contacts#confirm"
     get 'contacts/thanks'=>"contacts#thanks"
     resources :customers,only:[:show,:edit,:update]
-    resources :reservations,only:[:index,:edit,:update]
+    resources :reservations,only:[:new, :create, :index,:edit,:update]
     resource :contacts,only:[:new,:creat]
   end
   namespace :admins do
