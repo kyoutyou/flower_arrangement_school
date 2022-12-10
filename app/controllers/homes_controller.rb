@@ -12,6 +12,6 @@ class HomesController < ApplicationController
   end
 
   def calendar
-
+    
   end
 end

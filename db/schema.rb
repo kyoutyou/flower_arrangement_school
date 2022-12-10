@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_03_055413) do
+ActiveRecord::Schema.define(version: 2022_12_10_061542) do
 
   create_table "addresses", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 2022_12_03_055413) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.string "name", null: false
     t.text "detail", null: false
+    t.integer "lesson_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -53,8 +53,7 @@ ActiveRecord::Schema.define(version: 2022_12_03_055413) do
   end
 
   create_table "lessons", force: :cascade do |t|
-    t.integer "course_id", null: false
-    t.datetime "lesson_datetime", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -80,6 +79,7 @@ ActiveRecord::Schema.define(version: 2022_12_03_055413) do
   create_table "reservations", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "lesson_id", null: false
+    t.datetime "lesson_datetime", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -98,8 +98,8 @@ ActiveRecord::Schema.define(version: 2022_12_03_055413) do
     t.string "address", null: false
     t.string "telephone_number", null: false
     t.boolean "is_deleted", default: false, null: false
-    t.integer "course_id", null: false
-    t.integer "frequency", null: false
+    t.integer "course_id"
+    t.integer "frequency"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

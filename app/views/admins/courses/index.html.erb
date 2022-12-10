@@ -1,0 +1,27 @@
+<h4>コース一覧・追加</h4>
+<%= form_with model: @course,url: admins_courses_path,method: :post do |f| %>
+  <h6>レッスン選択</h6>
+    <%= f.select :lesson_id,[[ "来客レッスン", 1 ], [ "zoomレッスン", 2 ]] %>
+  <h6>コース名</h6>
+    <%= f.text_field :name %>
+  <h6>コース説明</h6>
+    <%= f.text_area :detail %>
+  <div class="field"></div>
+      <%= f.submit '新規登録' %>
+<% end %>
+<table class="table tabli-hover table-inverse">
+  <thead>
+    <tr>
+      <th>コース</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+    <tr>
+      <td><%= course.name %></td>
+      <td><%= course.detail %></td>
+      <td><%= link_to "編集する",edit_admins_course_path(course.id) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

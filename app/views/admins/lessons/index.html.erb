@@ -1,0 +1,22 @@
+<h4>レッスン一覧・追加</h4>
+<%= form_with model: @lesson,url: admins_lessons_path,method: :post do |f| %>
+  <h6>レッスン名</h6>
+    <%= f.text_field :name %>
+  <div class="field"></div>
+      <%= f.submit '新規登録' %>
+<% end %>
+<table class="table tabli-hover table-inverse">
+  <thead>
+    <tr>
+      <th>レッスン</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+    <tr>
+      <td><%= lesson.name %></td>
+      <td><%= link_to "編集する",edit_admins_lesson_path(lesson.id) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

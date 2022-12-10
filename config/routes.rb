@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     post 'contacts/confirm'=>"contacts#confirm"
     get 'contacts/thanks'=>"contacts#thanks"
     resources :customers,only:[:show,:edit,:update]
-    resources :reservations,only:[:new, :create, :index,:edit,:update]
+    resources :reservations,only:[:create, :index,:edit,:update]
     resource :contacts,only:[:new,:creat]
   end
   namespace :admins do
@@ -34,5 +34,7 @@ Rails.application.routes.draw do
     resources :users,only:[:show,:edit,:update]
     resources :productions,only:[:edit,:update]
     resources :reservations,only:[:index,:new,:create]
+    resources :lessons,only:[:index,:edit,:create,:update]
+    resources :courses,only:[:index,:edit,:create,:update]
   end
 end
