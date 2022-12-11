@@ -10,9 +10,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    if current_user.present?
+      
+      current_user.resevation.create(
+        lesson_id: ,
+        lesson_datetime: ,
+        )
+  end
 
   # GET /resource/edit
   # def edit

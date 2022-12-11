@@ -1,0 +1,13 @@
+<%= @date%>
+<%= form_with(model: @reservation,url: public_reservation_path(@reservation), local: true) do |form| %>
+
+  <div class="time">
+    <%= form.label :lesson_datetime %>
+    <%= form.datetime_select :lesson_datetime %>
+  </div>
+
+  <div class="submit">
+    <%= form.submit %>
+  </div>
+
+<% end %>
