@@ -11,13 +11,30 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    super
-    if current_user.present?
-      
-      current_user.resevation.create(
-        lesson_id: ,
-        lesson_datetime: ,
-        )
+    # ユーザーの登録
+    build_resource(sign_up_params)
+    resource.save!
+
+    user = User.find_by(email: params.require(:user)[:email])
+    if user.present?
+      frequency = params.require(:user)[:frequency]
+      case frequency
+      when "1" then
+          # 登録時には「月1回コース」の場合には来週の土曜日が予約として入るようにする
+        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.next_week(:saturday) )
+      when "2" then
+          # 登録時には「月2回コース」の場合には来週の土曜日、その２週間後の土曜日が予約として入るようにする
+      　user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.next_week(:saturday) )
+        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.next_week(:saturday) + 2.weeks )
+      when "3" then
+          # 登録時には「月3回コース」の場合にはその週の土曜日、１週間後の土曜日、２週間後の土曜日が予約として入るようにする
+        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.end_of_week - 1.day)
+        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.end_of_week - 1.day + 1.weeks )
+        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.end_of_week - 1.day + 2.weeks )
+      end
+    end
+    sign_in user
+    redirect_to public_customer_path(:id)
   end
 
   # GET /resource/edit

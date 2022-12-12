@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   belongs_to :course
+  has_many :reservations
   validates :course_id,presence: true
   validates :frequency,presence: true
   # Include default devise modules. Others available are:
