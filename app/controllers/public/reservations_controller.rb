@@ -10,7 +10,7 @@ class Public::ReservationsController < ApplicationController
     redirect_to home_calendar_path
   end
 
-   private
+  private
   def reservation_params
     params.require(:reservation).permit(:lesson_datetime)
   end

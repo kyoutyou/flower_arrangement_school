@@ -1,5 +1,5 @@
 <%= @date%>
-<%= form_with(model: @reservation,url: public_reservation_path(@reservation), local: true) do |form| %>
+<%= form_with(model: @reservation,url: admins_reservation_path(@reservation), local: true) do |form| %>
 
   <div class="time">
     <%= form.label :lesson_datetime %>
