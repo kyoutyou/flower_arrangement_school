@@ -33,7 +33,7 @@ Rails.application.routes.draw do
     root to:"homes#top"
     resources :users,only:[:show,:edit,:update]
     resources :productions,only:[:edit,:update]
-    resources :reservations,only:[:edit,:update]
+    resources :reservations,only:[:index,:edit,:update]
     resources :lessons,only:[:index,:edit,:create,:update]
     resources :courses,only:[:index,:edit,:create,:update]
   end

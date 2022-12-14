@@ -1,13 +1,17 @@
 class Admins::ReservationsController < ApplicationController
+  def index
+    @reservations = Reservation.all
+  end
+
   def edit
-    @reservation = Reservation.find_by(user_id: current_user.id)
+    @reservation = Reservation.find_by(params[:user_id])
     @date = params[:date]
   end
 
   def update
     @reservation = Reservation.find(params[:id])
     @reservation.update(reservation_params)
-    redirect_to home_calendar_path
+    redirect_to admins_reservations_path
   end
 
   private
