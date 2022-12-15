@@ -62,6 +62,11 @@
               <% end %>
             </li>
             <li class="nav-item">
+              <%= link_to admins_reservations_path do %>
+                <div class="nav-link">予約一覧</div>
+              <% end %>
+            </li>
+            <li class="nav-item">
               <%= link_to  destroy_admin_session_path, method: :delete do %>
                 <div class="nav-link">ログアウト</div>
               <% end %>

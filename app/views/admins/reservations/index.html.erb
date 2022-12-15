@@ -1,2 +1,30 @@
+<div class="w-50 mx-auto">
+  <h4>予約一覧</h4>
+  <table class="table tabli-hover table-inverse">
+    <thead>
+      <tr>
+        <th>日にち</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.user_id %></td>
+        <td>
+          <%= reservation.user.first_name %>
+          <%= reservation.user.last_name %>
+        </td>
+        <td><%= reservation.lesson_datetime %></td>
+        <td><%= @date%></td>
+        <td><%= link_to '予約変更',edit_admins_reservation_path() %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
         
-<td><%= link_to '予約変更',edit_admins_reservation_path(user_id: @user) %></td>
+
+
+
+
+

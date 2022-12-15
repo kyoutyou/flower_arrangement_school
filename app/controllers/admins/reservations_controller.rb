@@ -1,6 +1,8 @@
 class Admins::ReservationsController < ApplicationController
   def index
     @reservations = Reservation.all
+    # @user=User.find(params[:id])
+    @date = params[:date]
   end
 
   def edit
