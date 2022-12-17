@@ -1,13 +1,14 @@
+<div class="w-50 mx-auto p-5">
 <%= @date%>
 <%= form_with(model: @reservation,url: admins_reservation_path(@reservation), local: true) do |form| %>
 
   <div class="time">
-    <%= form.label :lesson_datetime %>
+    <%= form.label :lesson_datetime,'変更日時' %>
     <%= form.datetime_select :lesson_datetime %>
   </div>
 
   <div class="submit">
-    <%= form.submit %>
+    <%= form.submit '予約変更' %>
   </div>
-
+</div>
 <% end %>

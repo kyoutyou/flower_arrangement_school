@@ -13,6 +13,17 @@ class Public::CustomersController < ApplicationController
     redirect_to public_customer_path(current_user)
   end
 
+  def unsubscibe
+  end
+
+  def withdraw
+    @public_customer=current_user
+    @public_customer.update(is_deleted: true)
+
+    sign_out_and_redirect(current_user)
+  end
+
+
   private
   def customer_params
     params.require(:user).permit(:last_name,:first_name,:last_name_kana,:first_name_kana, :postal_code, :address, :telephone_number,:is_deleted,:email)

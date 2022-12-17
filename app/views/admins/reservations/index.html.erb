@@ -1,28 +1,40 @@
 <div class="w-50 mx-auto">
   <h4>予約一覧</h4>
+  <%= link_to 'リセット',admins_reservations_path %>
   <table class="table tabli-hover table-inverse">
     <thead>
       <tr>
-        <th>日にち</th>
+        <th></th>
+        <th>名前 <%= link_to '▼',admins_reservations_path(sort: "user.name") %></th>
+        <th>日にち <%= link_to '▼',admins_reservations_path(sort: "lesson_datetime") %></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
+      <% before_user_id = 0 %>
       <% @reservations.each do |reservation| %>
       <tr>
-        <td><%= reservation.user_id %></td>
-        <td>
-          <%= reservation.user.first_name %>
-          <%= reservation.user.last_name %>
-        </td>
-        <td><%= reservation.lesson_datetime %></td>
-        <td><%= @date%></td>
-        <td><%= link_to '予約変更',edit_admins_reservation_path() %></td>
+        <% if before_user_id == reservation.user_id %>
+          <td></td>
+          <td></td>
+          <td><%= reservation.lesson_datetime %></td>
+          <td><%= link_to '予約変更',edit_admins_reservation_path(reservation.id) %></td>
+        <% else %>
+          <td><%= reservation.user_id %></td>
+          <td>
+            <%= reservation.user.first_name %>
+            <%= reservation.user.last_name %>
+          </td>
+          <td><%= reservation.lesson_datetime %></td>
+          <td><%= link_to '予約変更',edit_admins_reservation_path(reservation.id) %></td>
+        <% end %>
       </tr>
+      <% before_user_id = reservation.user_id %>
       <% end %>
     </tbody>
   </table>
 </div>
-        
+
 
 
 

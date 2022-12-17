@@ -1,8 +1,12 @@
 class Admins::ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
-    # @user=User.find(params[:id])
-    @date = params[:date]
+    if params[:sort] == "lesson_datetime"
+      @reservations = Reservation.order('lesson_datetime DESC')
+    elsif params[:sort] == "user.name"
+      @reservations = Reservation.includes(:user).sort {|a,b| b.user.first_name_kana <=> a.user.first_name_kana}
+    else
+      @reservations = Reservation.all
+    end
   end
 
   def edit

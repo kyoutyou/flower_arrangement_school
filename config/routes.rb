@@ -21,8 +21,8 @@ Rails.application.routes.draw do
     get 'home/calendar'=>"homes#calendar"
     resources :calendars,only:[:show]
   namespace :public do
-    get 'users/unsubscribe'=>'users#unsubscribe'
-    get 'users/withdraw'=>'users#withdraw'
+    get 'customers/unsubscribe'=>'customers#unsubscribe'
+    get 'customers/withdraw'=>'customers#withdraw'
     post 'contacts/confirm'=>"contacts#confirm"
     get 'contacts/thanks'=>"contacts#thanks"
     resources :customers,only:[:show,:edit,:update]
