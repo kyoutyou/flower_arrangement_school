@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     get 'contacts/thanks'=>"contacts#thanks"
     resources :customers,only:[:show,:edit,:update]
     resources :reservations,only:[:create, :index,:edit,:update]
-    resource :contacts,only:[:new,:creat]
+    resource :contacts,only:[:new,:create]
   end
   namespace :admins do
     root to:"homes#top"
