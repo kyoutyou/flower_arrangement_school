@@ -31,10 +31,12 @@ Rails.application.routes.draw do
   end
   namespace :admins do
     root to:"homes#top"
+    post 'contacts/confirm'=>"contacts#confirm"
     resources :users,only:[:show,:edit,:update]
     resources :productions,only:[:edit,:update]
     resources :reservations,only:[:index,:edit,:update]
     resources :lessons,only:[:index,:edit,:create,:update]
     resources :courses,only:[:index,:edit,:create,:update]
+    resource :contacts,only:[:new,:create]
   end
 end

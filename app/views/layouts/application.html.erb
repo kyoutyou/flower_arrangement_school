@@ -67,6 +67,11 @@
               <% end %>
             </li>
             <li class="nav-item">
+              <%= link_to new_admins_contacts_path do %>
+                <div class="nav-link">一斉送信</div>
+              <% end %>
+            </li>
+            <li class="nav-item">
               <%= link_to  destroy_admin_session_path, method: :delete do %>
                 <div class="nav-link">ログアウト</div>
               <% end %>

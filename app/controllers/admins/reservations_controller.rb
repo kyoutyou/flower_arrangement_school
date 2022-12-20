@@ -1,9 +1,9 @@
 class Admins::ReservationsController < ApplicationController
   def index
     if params[:sort] == "lesson_datetime"
-      @reservations = Reservation.order('lesson_datetime DESC')
+      @reservations = Reservation.order('lesson_datetime ASC')
     elsif params[:sort] == "user.name"
-      @reservations = Reservation.includes(:user).sort {|a,b| b.user.first_name_kana <=> a.user.first_name_kana}
+      @reservations = Reservation.includes(:user).sort {|a,b| a.user.first_name_kana <=> b.user.first_name_kana}
     else
       @reservations = Reservation.all
     end

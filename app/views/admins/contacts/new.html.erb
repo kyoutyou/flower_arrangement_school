@@ -1,9 +1,7 @@
 <div class="w-50 mx-auto">
-  <h4>お問い合わせ</h4>
-    <%= form_with url: public_contacts_confirm_path, method: :post do |f| %>
-      <% unless current_user %>
+  <h4>一斉送信</h4>
+    <%= form_with url: admins_contacts_confirm_path, method: :post do |f| %>
         <%= f.email_field :email %>
-      <% end %>
         <%= f.text_field :name %>
         <%= f.text_area :body %>
         <%= f.submit '確認画面へ進む' %>

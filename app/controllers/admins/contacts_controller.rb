@@ -1,4 +1,4 @@
-class Public::ContactsController < ApplicationController
+class Admins::ContactsController < ApplicationController
   def new
   end
 
@@ -11,7 +11,7 @@ class Public::ContactsController < ApplicationController
     @body = params[:body]
     @email = current_user ? current_user.email : params[:email]
     @name = params[:name]
-    UserMailer.inquiry_mail(@email,@name,@body).deliver_later
-    redirect_to public_contacts_thanks_path
+    AdminMailer.inquiry_mail(@email,@name,@body).deliver_later
+    redirect_to admins_root_path
   end
 end
