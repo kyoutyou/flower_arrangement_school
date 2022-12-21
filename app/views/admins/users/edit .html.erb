@@ -1,0 +1,40 @@
+<div class="w-25 mx-auto">
+  <h4>
+    <%= @user.first_name %>
+    <%= @user.last_name %>
+    の会員情報編集
+  </h4>
+  <%= form_with model: @user,url:admins_user_path(@user.id), method: :patch do |f| %>
+    <h6>会員ID</h6>
+    <%= @user.id %>
+
+    <h6>氏名</h6>
+    <%= f.text_field :first_name %>
+    <%= f.text_field :last_name %>
+
+    <h6>フリガナ</h6>
+    <%= f.text_field :first_name_kana %>
+    <%= f.text_field :last_name_kana %>
+
+    <h6>郵便番号</h6>
+    <%= f.text_field :postal_code %>
+
+    <h6>住所</h6>
+    <%= f.text_field :address %>
+
+    <h6>電話番号</h6>
+    <%= f.text_field :telephone_number %>
+
+    <h6>メールアドレス</h6>
+    <%= f.text_field :email %>
+
+    <h6>会員ステータス</h6>
+    <%= f.radio_button :is_deleted,true %>
+    <%= f.label :is_deleted, "退会" %>
+
+    <%= f.radio_button :is_deleted,false %>
+    <%= f.label :is_deleted, "有効" %>
+
+    <h6 class="m-5"><%= f.submit '変更を保存' %></h6>
+  <% end %>
+</div>
