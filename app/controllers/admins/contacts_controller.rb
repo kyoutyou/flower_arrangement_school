@@ -3,15 +3,13 @@ class Admins::ContactsController < ApplicationController
   end
 
   def confirm
+    @subject = params[:subject]
     @name = params[:name]
     @body = params[:body]
   end
 
   def create
-    @body = params[:body]
-    @email = current_user ? current_user.email : params[:email]
-    @name = params[:name]
-    AdminMailer.inquiry_mail(@email,@name,@body).deliver_later
+    AdminMailer.inquiry_mail(params[:subject], params[:name], params[:body]).deliver_later
     redirect_to admins_root_path
   end
 end

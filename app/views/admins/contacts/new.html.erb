@@ -1,9 +1,9 @@
 <div class="w-50 mx-auto">
   <h4>一斉送信</h4>
     <%= form_with url: admins_contacts_confirm_path, method: :post do |f| %>
-        <%= f.email_field :email %>
-        <%= f.text_field :name %>
-        <%= f.text_area :body %>
-        <%= f.submit '確認画面へ進む' %>
+      <%= f.text_field :subject %>
+      <%= f.text_field :name %>
+      <%= f.text_area :body %>
+      <%= f.submit '確認画面へ進む' %>
     <% end %>
 </div>

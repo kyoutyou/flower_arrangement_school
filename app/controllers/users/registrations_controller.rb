@@ -88,5 +88,44 @@ class Users::RegistrationsController < Devise::RegistrationsController
       redirect_to root_path, alert: 'ゲストユーザーの更新・削除はできません。'
     end
   end
+
+  def saturday_of_month(date)
+    bom = date.beginning_of_month
+    eom = date.end_of_month
+    diff = (eom - bom).to_i
+
+    saturday_array = []
+    (0..diff).each do |v|
+      saturday_array << bom + v.day if (bom + v.day).wday == 6
+    end
+
+    pp saturday_array
+
+    next_saturday = date.next_week(:saturday)
+
+    if saturday_array.index(next_saturday).nil? || saturday_array.index(next_saturday) >= 3
+
+      # 月始まりが日曜日以外の場合は、前月の週を引き継ぐ
+      if (date + 1.month).beginning_of_month.wday != 0
+        ((date + 1.month).beginning_of_month - 1.weeks).next_week(:saturday)
+      else
+        (date + 1.month).beginning_of_month.next_week(:saturday)
+      end
+      # case saturday_array.index(next_saturday)
+      #   when 3 then
+      #     (date + 2.week).next_week(:saturday)
+      #   when 4 then
+      #     (date + 1.week).next_week(:saturday)
+      #   else
+      #     date.beginning_of_month.next_week(:saturday)
+      # end
+      # 1-3週目
+      # return true
+    else
+      date.next_week(:saturday)
+      # 4週目
+      # return false
+    end
+  end
 end
 
