@@ -17,20 +17,34 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     user = User.find_by(email: params.require(:user)[:email])
     if user.present?
-      frequency = params.require(:user)[:frequency]
+      # frequency = params.require(:user)[:frequency]
+      frequency = Course.find(params.require(:user)[:frequency]).number
+      date = Date.today
       case frequency
-      when "1" then
+      when 1 then
           # 登録時には「月1回コース」の場合には来週の土曜日が予約として入るようにする
-        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.next_week(:saturday) )
-      when "2" then
+        user.reservations.create(lesson_id: params.require(:user)[:course_id],
+          lesson_datetime: saturday_of_weeks(date)
+        )
+      when 2 then
           # 登録時には「月2回コース」の場合には来週の土曜日、その２週間後の土曜日が予約として入るようにする
-      　user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.next_week(:saturday) )
-        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.next_week(:saturday) + 2.weeks )
-      when "3" then
+        user.reservations.create(lesson_id: params.require(:user)[:course_id],
+          lesson_datetime: saturday_of_weeks(date)
+        )
+        user.reservations.create(lesson_id: params.require(:user)[:course_id],
+          lesson_datetime: saturday_of_weeks(saturday_of_weeks(date))
+        )
+      when 3 then
           # 登録時には「月3回コース」の場合にはその週の土曜日、１週間後の土曜日、２週間後の土曜日が予約として入るようにする
-        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.end_of_week - 1.day)
-        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.end_of_week - 1.day + 1.weeks )
-        user.reservations.create(lesson_id: params.require(:user)[:course_id], lesson_datetime: Date.today.end_of_week - 1.day + 2.weeks )
+        user.reservations.create(lesson_id: params.require(:user)[:course_id],
+          lesson_datetime: saturday_of_weeks(date)
+        )
+        user.reservations.create(lesson_id: params.require(:user)[:course_id],
+          lesson_datetime: saturday_of_weeks(saturday_of_weeks(date))
+        )
+        user.reservations.create(lesson_id: params.require(:user)[:course_id],
+          lesson_datetime: saturday_of_weeks(saturday_of_weeks(saturday_of_weeks(date)))
+        )
       end
     end
     sign_in user
@@ -89,42 +103,36 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def saturday_of_month(date)
-    bom = date.beginning_of_month
-    eom = date.end_of_month
-    diff = (eom - bom).to_i
+  def saturday_of_weeks(date)
+    beginning_of_month = date.beginning_of_month # 月初
+    end_of_month = date.end_of_month # 月末
+    diff = (end_of_month - beginning_of_month).to_i # 月初と月末の差分
 
+    # 月初から月末までの土曜日のみ配列にする
     saturday_array = []
     (0..diff).each do |v|
-      saturday_array << bom + v.day if (bom + v.day).wday == 6
+      saturday_array << beginning_of_month + v.days if (beginning_of_month + v.days).wday == 6
     end
 
-    pp saturday_array
-
+    # 引数の日から翌週の土曜日日付
     next_saturday = date.next_week(:saturday)
 
-    if saturday_array.index(next_saturday).nil? || saturday_array.index(next_saturday) >= 3
+    # 引数の翌週土曜日が何周目かindexで取得(※1)
+    saturday_index = saturday_array.index(next_saturday)
 
-      # 月始まりが日曜日以外の場合は、前月の週を引き継ぐ
-      if (date + 1.month).beginning_of_month.wday != 0
-        ((date + 1.month).beginning_of_month - 1.weeks).next_week(:saturday)
+    # ※1がnil(翌月またぎ)または、1～3週目かの条件分岐
+    if saturday_index.nil? || saturday_index >= 3
+      # 該当日付の年間週番号と指定日月末の年間週番号が同じかまたは、指定日月末が土曜日の場合の条件分岐
+      if date.cweek == end_of_month.cweek || end_of_month.wday == 6
+        # 翌月の基準日から+7日した翌週の土曜日
+        date.beginning_of_month.next_month.next_week(:saturday)
       else
-        (date + 1.month).beginning_of_month.next_week(:saturday)
+        # 翌月の基準日から-7日した土曜日
+        date.beginning_of_month.next_month.next_occurring(:saturday)
       end
-      # case saturday_array.index(next_saturday)
-      #   when 3 then
-      #     (date + 2.week).next_week(:saturday)
-      #   when 4 then
-      #     (date + 1.week).next_week(:saturday)
-      #   else
-      #     date.beginning_of_month.next_week(:saturday)
-      # end
-      # 1-3週目
-      # return true
     else
-      date.next_week(:saturday)
-      # 4週目
-      # return false
+      # 単純に翌週土曜日
+      next_saturday
     end
   end
 end

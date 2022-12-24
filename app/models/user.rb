@@ -17,6 +17,8 @@ class User < ApplicationRecord
       user.address="日本"
       user.telephone_number="111111"
       user.password = SecureRandom.urlsafe_base64
+      user.course_id = 1
+      user.frequency = 1
     end
   end
 end

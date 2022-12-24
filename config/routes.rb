@@ -33,7 +33,7 @@ Rails.application.routes.draw do
     root to:"homes#top"
     post 'contacts/confirm'=>"contacts#confirm"
     resources :users,only:[:show,:edit,:update]
-    resources :productions,only:[:new,:edit,:update]
+    resources :productions,only:[:index,:create,:destroy]
     resources :reservations,only:[:index,:edit,:update]
     resources :lessons,only:[:index,:edit,:create,:update]
     resources :courses,only:[:index,:edit,:create,:update]

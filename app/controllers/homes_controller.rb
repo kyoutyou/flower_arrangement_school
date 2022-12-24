@@ -5,13 +5,13 @@ class HomesController < ApplicationController
   def about
   end
 
-  def production
+  def productions
+    @productions = Production.all
   end
 
   def course
   end
 
   def calendar
-    
   end
 end

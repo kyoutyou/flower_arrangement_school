@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2022_12_21_135622) do
   create_table "courses", force: :cascade do |t|
     t.string "name", null: false
     t.text "detail", null: false
-    t.integer "lesson_id"
+    t.integer "number", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -84,6 +84,8 @@ ActiveRecord::Schema.define(version: 2022_12_21_135622) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "course_id"
+    t.datetime "lesson_datetime"
   end
 
   create_table "order_details", force: :cascade do |t|
@@ -97,8 +99,7 @@ ActiveRecord::Schema.define(version: 2022_12_21_135622) do
   end
 
   create_table "productions", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "production_name", null: false
+    t.string "title", null: false
     t.text "introduction", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -107,7 +108,7 @@ ActiveRecord::Schema.define(version: 2022_12_21_135622) do
   create_table "reservations", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "lesson_id", null: false
-    t.datetime "lesson_datetime", null: false
+    t.date "lesson_datetime", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

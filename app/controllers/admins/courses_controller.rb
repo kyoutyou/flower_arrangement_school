@@ -23,6 +23,6 @@ class Admins::CoursesController < ApplicationController
 
   private
   def course_params
-    params.require(:course).permit(:name,:detail,:lesson_id)
+    params.require(:course).permit(:name,:detail,:number)
   end
 end

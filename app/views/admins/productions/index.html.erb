@@ -1,5 +1,24 @@
 <div class="container">
-    <h4>教室生徒作品一覧</h4>
+  <h2>新規作品投稿</h2>
+  <%= form_with model: @production, url: admins_productions_path do |f| %>
+
+    <h4>タイトル</h4>
+    <%= f.text_field :title %>
+
+    <h4>本文</h4>
+    <%= f.text_area :introduction %>
+
+    <h4>画像</h4>
+    <%= f.file_field :image, accept: "image/*" %>
+
+    <%= f.submit '投稿' %>
+
+  <% end %>
+</div>
+
+<hr>
+
+<div class="container">
   <div class="row">
     <% @productions.each do |production| %>
       <div class="col-md-4">

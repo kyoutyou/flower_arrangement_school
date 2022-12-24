@@ -45,30 +45,41 @@
           <%= f.text_field :telephone_number, autofocus: true %>
         </div>
     </div>
-    <div class="d-flex">
-      <div class="form-group row d-flex block w-50" >
-        <%= f.label :course_id,"来室レッスン",class:' col-form-label' %>
-        <%= f.radio_button :course_id,1 %>
-      </div>
-      <div class="form-group row block w-50" >
-        <%= f.label :course_id,"ZOOMレッスン",class:'col-form-label' %>
-        <%= f.radio_button :course_id,2 %>
-      </div>
+    <!--<div class="d-flex">-->
+    <!--  <div class="form-group row d-flex block w-50" >-->
+    <!--    <%= f.label :course_id,"来室レッスン",class:' col-form-label' %>-->
+    <!--    <%= f.radio_button :course_id,1 %>-->
+    <!--  </div>-->
+    <!--  <div class="form-group row block w-50" >-->
+    <!--    <%= f.label :course_id,"ZOOMレッスン",class:'col-form-label' %>-->
+    <!--    <%= f.radio_button :course_id,2 %>-->
+    <!--  </div>-->
+    <!--</div>-->
+
+    <div class="form-group">
+      <%= f.label :course_id, "レッスン方法" %>
+      <%= f.collection_select(:course_id, Lesson.all, :id, :name, {}, class: 'form-control') %>
     </div>
-    <div class="d-flex">
-      <div class="form-group row w-100" >
-        <%= f.label :frequency,"月3回コース",class:' col-form-label' %>
-        <%= f.radio_button :frequency,3 %>
-      </div>
-      <div class="form-group row w-100" >
-        <%= f.label :frequency,"月2回コース",class:' col-form-label' %>
-        <%= f.radio_button :frequency,2 %>
-      </div>
-      <div class="form-group row w-100" >
-        <%= f.label :frequency,"月1回コース",class:' col-form-label' %>
-        <%= f.radio_button :frequency,1 %>
-      </div>
+    <!--<div class="d-flex">-->
+    <!--  <div class="form-group row w-100" >-->
+    <!--    <%= f.label :frequency,"月3回コース",class:' col-form-label' %>-->
+    <!--    <%= f.radio_button :frequency,3 %>-->
+    <!--  </div>-->
+    <!--  <div class="form-group row w-100" >-->
+    <!--    <%= f.label :frequency,"月2回コース",class:' col-form-label' %>-->
+    <!--    <%= f.radio_button :frequency,2 %>-->
+    <!--  </div>-->
+    <!--  <div class="form-group row w-100" >-->
+    <!--    <%= f.label :frequency,"月1回コース",class:' col-form-label' %>-->
+    <!--    <%= f.radio_button :frequency,1 %>-->
+    <!--  </div>-->
+    <!--</div>-->
+
+    <div class="form-group">
+       <%= f.label :frequency, "レッスン回数" %>
+     <%= f.collection_select(:frequency, Course.all, :id, :name, {}, class: 'form-control') %>
     </div>
+
     <div class="form-group row" >
       <%= f.label :password,"パスワード(6文字以上)",class:'col-sm-2 col-form-label' %>
         <div class="col-sm-10">
