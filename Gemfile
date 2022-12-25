@@ -60,3 +60,4 @@ gem "net-smtp"
 gem 'simple_calendar', '~> 2.0'
 
 gem 'dotenv-rails'
+gem "whenever"

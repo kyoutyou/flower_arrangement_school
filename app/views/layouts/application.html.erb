@@ -35,6 +35,11 @@
               <% end %>
             </li>
             <li class="nav-item">
+              <%= link_to  production_path do %>
+                <div class="nav-link">作品紹介</div>
+              <% end %>
+            </li>
+            <li class="nav-item">
               <%= link_to new_public_contacts_path do %>
                 <div class="nav-link">お問い合わせ</div>
               <% end %>
@@ -59,6 +64,11 @@
             <li class="nav-item">
               <%= link_to admins_courses_path do %>
                 <div class="nav-link">コース一覧</div>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to  admins_productions_path do %>
+                <div class="nav-link">作品投稿</div>
               <% end %>
             </li>
             <li class="nav-item">
@@ -97,7 +107,8 @@
               <%= link_to  production_path do %>
                 <div class="nav-link">作品紹介</div>
               <% end %>
-            </li><li class="nav-item">
+            </li>
+            <li class="nav-item">
               <%= link_to new_user_registration_path do %>
                 <div class="nav-link">新規登録</div>
               <% end %>
