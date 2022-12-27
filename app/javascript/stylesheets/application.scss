@@ -1,1 +1,34 @@
 @import '~bootstrap/scss/bootstrap';
+
+.image-top {
+  background-image: url('../images/image-top.jpg');
+  height: 91vh;
+  background-position: 50%, 50%;
+  background-size: cover;
+
+  &__title {
+    padding-top: 10%;
+  }
+
+  &__description {
+    padding-top: 5%;
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.about-top {
+  background-color: red;
+  height: 91vh;
+
+  &__title {
+    background-color: #fff;
+  }
+
+  &__description {
+    background-color: white;
+  }
+
+}
