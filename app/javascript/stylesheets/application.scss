@@ -20,15 +20,28 @@
 }
 
 .about-top {
-  background-color: red;
+  background-image: url('../images/about-top.jpg');
   height: 91vh;
+  background-position: 50%, 50%;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 10px;
 
-  &__title {
-    background-color: #fff;
+  .container {
+
+    p {
+        margin: 0;
+        text-align: center;
+    }
   }
+}
 
-  &__description {
-    background-color: white;
-  }
-
+.course-top {
+  background-image: url('../images/course-top.jpg');
+  height: 91vh;
+  background-position: 50%, 50%;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 30px;
 }
