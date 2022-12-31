@@ -14,6 +14,12 @@ class Admins::ProductionsController < ApplicationController
     end
   end
 
+  def destroy
+    @production = Production.find(params[:id])
+    @production.destroy
+    redirect_to  admins_productions_path
+  end
+
   private
 
   def production_params

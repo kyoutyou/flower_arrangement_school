@@ -34,6 +34,7 @@
           </div>
         </div>
       </div>
+      <%= link_to "削除する",  admins_production_path(production.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
     <% end %>
   </div>
 </div>

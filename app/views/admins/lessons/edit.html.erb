@@ -1,0 +1,8 @@
+<div class="w-50 mx-auto">
+  <h4>レッスン編集</h4>
+  <%= form_with model: @lesson do |f| %>
+     <h6>レッスン名</h6>
+     <%= f.text_field :name %>
+     <h6 class="m-5"><%= f.submit '変更内容を保存' %></h6>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+<div class="w-50 mx-auto">
+  <h4>コース編集</h4>
+  <%= form_with model: @course do |f| %>
+     <h6>コース名</h6>
+     <%= f.text_field :name %>
+     <h6>コース説明</h6>
+     <%= f.text_area :detail %>
+     <h6>コース回数</h6>
+     <%= f.text_field :number %>
+     <h6 class="m-5"><%= f.submit '変更内容を保存' %></h6>
+  <% end %>
+</div>
