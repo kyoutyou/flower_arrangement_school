@@ -1,6 +1,6 @@
 <div class="w-50 mx-auto">
   <h4>コース編集</h4>
-  <%= form_with model: @course do |f| %>
+  <%= form_with model: @course,url: admins_course_path,method: :patch do |f| %>
      <h6>コース名</h6>
      <%= f.text_field :name %>
      <h6>コース説明</h6>
