@@ -1,12 +1,11 @@
 <div class="w-50 mx-auto ">
   <h4 class="text-center">送信内容確認</h4>
     <p>タイトル: <%= @subject %></p>
-    <p><%= @name %></p>
     <p>
     【送信内容】
     </p>
     <p>
-    <%= @body %>
+    <%= safe_join(@body.split("\n"),tag(:br)) %>
     </p>
     =======================================
     <p>
@@ -15,7 +14,6 @@
 
     <%= form_with url: admins_contacts_path, method: :post do |f| %>
       <%= f.hidden_field :subject, value: @subject %>
-      <%= f.hidden_field :name, value: @name %>
       <%= f.hidden_field :body, value: @body %>
       <%= f.submit '一斉送信' %>
     <% end %>
