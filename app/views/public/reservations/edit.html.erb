@@ -1,12 +1,13 @@
+<h4 class="text-center m-5">予約変更画面</h4>
 <%= @date%>
 <%= form_with(model: @reservation,url: public_reservation_path(@reservation), local: true) do |form| %>
 
-  <div class="time">
+  <div class="time text-center">
     <%= form.label :lesson_datetime, 'レッスン日' %>
     <%= form.date_select :lesson_datetime %>
   </div>
 
-  <div class="submit">
+  <div class="submit text-center">
     <%= form.submit '変更' %>
   </div>
 

@@ -2,9 +2,12 @@
   <h4>お問い合わせ</h4>
     <%= form_with url: public_contacts_confirm_path, method: :post do |f| %>
       <% unless current_user %>
+      <h6>メールアドレス</h6>
         <%= f.email_field :email %>
       <% end %>
+      <h6>お名前</h6>
         <%= f.text_field :name %>
+        <h6>本文</h6>
         <%= f.text_area :body %>
         <%= f.submit '確認画面へ進む' %>
     <% end %>

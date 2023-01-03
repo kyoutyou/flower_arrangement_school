@@ -5,19 +5,19 @@
     【お問合せ内容】
     </p>
     <p>
-    <%= @body%>
+    <%= safe_join(@body.split("\n"),tag(:br)) %>
     </p>
     =======================================
     <p>
-    上記の内容でお間違いのないようでしたら下記の一斉送信を押してください。
+    上記の内容でお間違いのないようでしたら下記の送信を押してください。
     </p>
 
-    <%= form_with url: admins_contacts_path, method: :post do |f| %>
+    <%= form_with url: public_contacts_confirm_path, method: :post do |f| %>
       <% unless current_user %>
         <%= f.email_field :email %><%= f.hidden_field :email, value: @email %>
       <% end %>
       <%= f.hidden_field :name, value: @name %>
       <%= f.hidden_field :body, value: @body %>
-      <%= f.submit '一斉送信' %>
+      <%= f.submit '送信' %>
     <% end %>
 </div>
