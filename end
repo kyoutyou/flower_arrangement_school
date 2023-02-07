@@ -1,0 +1,317 @@
+[33mcommit 97b933a8101ce2e94f99e91b3bd3d0802b20ec90[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 24 12:42:04 2023 +0000
+
+    [Fix]レイアウト
+
+[33mcommit fe4508eeec8bb9561fc97cdf0f1637dc44a5aeca[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Mon Jan 23 15:28:31 2023 +0000
+
+    [Fix]トップページのレイアウト
+
+[33mcommit 15f28b0bccb60992e91cb67ba052002ecda9473c[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Mon Jan 23 15:21:47 2023 +0000
+
+    [Fix]コース・レッスン一覧のレイアウト
+
+[33mcommit be3d3b043484b387e7a7ec0cdf52bd8a6f403668[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 06:55:30 2023 +0000
+
+    [Fix]Css
+
+[33mcommit 09026c77b2f811f2837d73506b9eb19cdcf7da95[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 06:41:50 2023 +0000
+
+    [Fix]Css
+
+[33mcommit 291559843e8aa8a0c2853bf53668169d83e269ed[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 05:43:08 2023 +0000
+
+    [Fix]Css
+
+[33mcommit 41081107769333db81d9cafa60e0e0612a9339d0[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 05:40:36 2023 +0000
+
+    [Fix]Css
+
+[33mcommit b10e573728f9e2e4395beb060f0894057d54f1ac[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 05:37:13 2023 +0000
+
+    [Fix]Css
+
+[33mcommit 6bad950f78dcf1b159c25d553815af4cd4d1141e[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 05:33:21 2023 +0000
+
+    [Fix]Bootstrap
+
+[33mcommit 1a590abdcc1bb4a196688a4bd9437ac0fe7548a9[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 05:28:05 2023 +0000
+
+    [Fix]Bootstrap
+
+[33mcommit 518a1916ac586fc802ac898d91ed1866249fc2fa[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 18 05:17:49 2023 +0000
+
+    [Fix]Bootstrap
+
+[33mcommit da461f3b2a1b89a37086a8087d3c2102805ee074[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 17 12:55:24 2023 +0000
+
+    [Fix] layout
+
+[33mcommit 36140d51a8bb5d8fd84171dd5747bbf682f1c458[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 17 12:44:31 2023 +0000
+
+    [Add] GitHub Actions
+
+[33mcommit c1cdf0f558e30982bb51444bc44b9bfe3d8f14e4[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 17 12:32:35 2023 +0000
+
+    [Fix] Migrations
+
+[33mcommit d2856f55a28bafcc1faed9f9d680896ace6a394f[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 17 12:00:06 2023 +0000
+
+    [Fix] Migrations
+
+[33mcommit 854eac539da8e48f601ada0f055cca357dc0f8e0[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 17 11:49:03 2023 +0000
+
+    [Fix] Mail
+
+[33mcommit ec7da77e1e0ab8144b5908f01f902097ae3129ba[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 11 13:24:34 2023 +0000
+
+    deploy setting
+
+[33mcommit ff19b5e21eae39616fcc865ab672b197cab750ac[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 11 11:56:41 2023 +0000
+
+    [Add]Gemfile修正
+
+[33mcommit 18c812a56a157abb23a0b264981f2ddbdf55c619[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 10 14:45:37 2023 +0000
+
+    [Add]デプロイ用Gemfile
+
+[33mcommit cda50afed085a67124c8b3e880080793bf99bb05[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Jan 4 06:44:48 2023 +0000
+
+    [Add]ユーザーのお問い合わせ画面のレイアウト調整
+
+[33mcommit 3a370cd2e4c785884fc97b2b4880aee37d0d548e[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 3 15:36:58 2023 +0000
+
+    [Add]ユーザーの問い合わせ画面のレイアウト
+
+[33mcommit 303f50043fdff9c02f3bd504e442ac8a1886094c[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Jan 3 04:42:34 2023 +0000
+
+    [Add]一斉送信画面の名前入力欄の修正
+
+[33mcommit ec42e0a08e26082c891293636063da00bc716885[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sun Jan 1 15:09:45 2023 +0000
+
+    [Add]管理者側のレッスンとコースの編集機能
+
+[33mcommit d4c5033c631771b75ec5c2459a6ea85a28abc2da[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sat Dec 31 15:05:17 2022 +0000
+
+    [Add]管理者側の投稿削除機能
+
+[33mcommit 76c5cd30ff299ea9321ee394da95782369ec2a79[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Dec 28 14:40:50 2022 +0000
+
+    [Add]about,course背景画像
+
+[33mcommit 18790bbf9df600ca39b71359f1b028ade9e22537[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Dec 27 15:14:51 2022 +0000
+
+    [Add]topページのcss調整
+
+[33mcommit 6d247f9b47410de147bafe74e4009ca7df403475[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Mon Dec 26 13:59:25 2022 +0000
+
+    [Add]トップページ画像
+
+[33mcommit f466191cfd8d4a81a4c3d84464f9194f9f5145bc[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sun Dec 25 13:19:50 2022 +0000
+
+    [Add]予約機能の自動更新
+
+[33mcommit fd945ea7feceacd2c992689b93c036ad6ef6d9d1[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sat Dec 24 09:14:19 2022 +0000
+
+    [Add]新規登録時の予約機能と作品投稿画面
+
+[33mcommit cb3c93edd5e00ee61173d34a5adcf4be299bbe97[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Thu Dec 22 15:24:18 2022 +0000
+
+    [Add]管理者会員情報編集ページ
+
+[33mcommit 1f5fbc518c443a20d57d38d112692068be766edd[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Dec 21 14:42:37 2022 +0000
+
+    [Add]admin会員編集画面
+
+[33mcommit ff63912afa4bc0bcfe4ff8fd5b121f2d381790f5[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Dec 20 14:06:47 2022 +0000
+
+    [Add]管理者側の一斉送信機能
+
+[33mcommit 2efb4a9d8a8c77ea0d24f6ba7fc098a4185ffaa2[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sun Dec 18 14:20:10 2022 +0000
+
+    [Add]メーラー機能で送信もとに確認が届くように
+
+[33mcommit 562dc9c5b85058e4d7830181e83753d89ed7796f[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sat Dec 17 08:31:11 2022 +0000
+
+    [Add]退会機能、退会画面
+
+[33mcommit f85696c214845a024f08ca2332ff8336a83a1091[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Thu Dec 15 13:22:47 2022 +0000
+
+    [Add]admin予約一覧ページ
+
+[33mcommit 1611351f87dcbfe930e71b2db8beb80d71c76fe6[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Dec 14 13:36:51 2022 +0000
+
+    [Add]admin予約コントローラのアクション
+
+[33mcommit f75fd77758a585f99ca26763567deeab6b11911d[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Dec 13 13:22:31 2022 +0000
+
+    [Add]トップページのリンク修正
+
+[33mcommit 7cc26ca867196b19f4bc46205fc2a8de157070da[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Mon Dec 12 14:12:15 2022 +0000
+
+    [Add]新規登録時に予約がおこなわれるようにデバイスのコントローラ記述
+
+[33mcommit b8c5c99af182c0e1b90891a0f96b2d8497b77d54[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sun Dec 11 12:50:24 2022 +0000
+
+    [Add]予約機能のコントローラー調整
+
+[33mcommit 4c7e73d4d5e8218a47cf4487a2be2932638b38e9[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sun Dec 11 03:04:39 2022 +0000
+
+    [Add]ユーザー編集ページ
+
+[33mcommit 77120818ef1965ccfa64c62ae8c80a0747c9ccd1[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sat Dec 10 10:11:10 2022 +0000
+
+    [Add]カレンダー予約機能
+
+[33mcommit ba0bbcd19248046633d645a5b57fad05bcb2abd0[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Thu Dec 8 13:39:24 2022 +0000
+
+    [Add]会員一覧ページ
+
+[33mcommit f465a6890872f3ab19aac1222dc74ad0b4b55095[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Dec 7 12:52:43 2022 +0000
+
+    [Add]シンプルカレンダー
+
+[33mcommit 8e2177e4d3ecfdb99e043027e928f9fed8c0f8e0[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Tue Dec 6 13:38:13 2022 +0000
+
+    [Add]ユーザー管理機能
+
+[33mcommit 78707bb3ec0a303e06960f5a2060e8f8f21bb869[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sun Dec 4 15:05:03 2022 +0000
+
+    [Add]アクションメーラー・ゲストログイン機能
+
+[33mcommit ccbd3403ca44bc29c0ebc7af5afbc49e580c58ef[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sat Dec 3 14:18:45 2022 +0000
+
+    [Add]会員機能
+
+[33mcommit 7044c7823e5f7a064817a0239faee4b04644306f[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Thu Dec 1 13:44:37 2022 +0000
+
+    [Add]デバイス用モデル
+
+[33mcommit 12191a17794bc8f483fa3a81aa57f179b150357c[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Wed Nov 30 16:42:07 2022 +0000
+
+    [Add]ルーティングとブートストラップ
+
+[33mcommit 7cc90f316448c6766500d85b606f991ae89bfc69[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Mon Nov 28 14:54:27 2022 +0000
+
+    [Add]modelファイル
+
+[33mcommit 650c1434b62eb04b48bc813bc0f3fda9859b63c1[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Mon Nov 21 14:59:08 2022 +0000
+
+    [Add]README.md
+
+[33mcommit 2c722e2496405674deae0e320f200a116b8f6f84[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sun Nov 20 13:19:35 2022 +0000
+
+    [Add]README.md
+
+[33mcommit 170344c6136a550795d51a9f5ae227f1e97ba5e7[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sat Nov 19 08:13:09 2022 +0000
+
+    [Add]README.md
+
+[33mcommit 88601caa791b8cdb4fb7f37666ec3c6089b9852d[m
+Author: EC2 Default User <ec2-user@ip-172-31-1-137.ap-northeast-1.compute.internal>
+Date:   Sat Nov 19 08:07:47 2022 +0000
+
+    [Start]アプリケーション作成
