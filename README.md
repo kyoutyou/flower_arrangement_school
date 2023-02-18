@@ -40,12 +40,11 @@
 https://docs.google.com/spreadsheets/d/1ZhQS_s_DrH2ZBAETImMPoTwoqv7drajJJYryxk8gBhM/edit?usp=sharing
 
 ## 開発環境
-OS：Linux(CentOS)
+OS：Linux(AmazonLinux2)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
 
-## 使用素材
-使用検討中
+
 
